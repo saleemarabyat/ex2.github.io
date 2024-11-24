@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Table Layout</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+        }
+        /* Merging cells to create the layout */
+        .top-row, .bottom-row {
+            grid-column: 1 / span 6;
+        }
+        .left-column {
+            grid-row: 1 / span 4;
+        }
+        .middle-section {
+            grid-column: 2 / span 4;
+            grid-row: 2 / span 2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Table Layout</h1>
+
+<table>
+    <tr>
+        <td colspan="6" class="top-row"></td>
+    </tr>
+    <tr>
+        <td rowspan="4" class="left-column"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="4"></td>
+    </tr>
+    <tr>
+        <td colspan="4" rowspan="2" class="middle-section"></td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="6" class="bottom-row"></td>
+    </tr>
+</table>
+
+</body>
+</html>
+
